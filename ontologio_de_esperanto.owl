@@ -17,6 +17,92 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasAfikson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasAfikson">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Ekzemploj_de_vortoj"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Afiksoj"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasFinaĵon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasFinaĵon">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Ekzemploj_de_vortoj"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasPostfikson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasPostfikson">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasAfikson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasPrefikson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasPrefikson">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasAfikson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasRadikon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasRadikon">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Ekzemploj_de_vortoj"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Radikoj"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasSufikson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasSufikson">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasAfikson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:comment xml:lang="ru">У афикса может быть 
+грамматическое 
+синтаксическое и 
+семантическое значение.
+
+В базе будут слова у которых будут отношения:
+Имеет суфикс
+Имеет корень
+Имеет окончане
+Имеет основу.
+
+Можно расписать фонетику и алфавит языка. Следовательно, есть транскрибирование слов.
+
+Перевод на ...
+
+Имя буквы, капитализация буквы итп</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -28,7 +114,7 @@
     <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Abocodo -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Abocodo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Esperanto"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Skribo"/>
         <rdfs:comment xml:lang="ru">Алфавит</rdfs:comment>
     </owl:Class>
     
@@ -43,15 +129,97 @@
     
 
 
-    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Esperanto -->
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Ekzemploj_de_vortoj -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Esperanto"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Ekzemploj_de_vortoj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Esperanto"/>
+    </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵojn -->
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Esperanto -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵojn">
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Esperanto">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_a -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_a">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_as -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_as">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_e -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_e">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_i -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_i">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_is -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_is">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_o -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_o">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_os -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_os">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_u -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_u">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_us -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_us">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Vorteroj"/>
         <rdfs:comment xml:lang="ru">Окончания</rdfs:comment>
     </owl:Class>
@@ -76,11 +244,59 @@
     
 
 
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Literoj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Literoj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Abocodo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Majuskloj_literoj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Majuskloj_literoj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Literoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Minuskloj_literoj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Minuskloj_literoj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Literoj"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Morfologio -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Morfologio">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Esperanto"/>
         <rdfs:comment xml:lang="ru">Морфология</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Nomoj_de_literoj -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Nomoj_de_literoj">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Literoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Postf_j -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Postf_j">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Postfiksoj"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Postf_n -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Postf_n">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Postfiksoj"/>
     </owl:Class>
     
 
@@ -112,6 +328,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Skribo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Skribo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Esperanto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Suf_id -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Suf_id">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Sufiksoj"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Sufiksoj -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Sufiksoj">
@@ -133,26 +365,95 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotations
+    // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
-        <rdfs:comment xml:lang="ru">У афикса может быть 
-грамматическое 
-синтаксическое и 
-семантическое значение.
+    
 
-В базе будут слова у которых будут отношения:
-Имеет суфикс
-Имеет корень
-Имеет окончане
-Имеет основу.
 
-Можно расписать фонетику и алфавит языка. Следовательно, есть транскрибирование слов.
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_o -->
 
-Перевод на ...</rdfs:comment>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_o">
+        <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_o"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#hundidoj -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#hundidoj">
+        <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Ekzemploj_de_vortoj"/>
+        <HavasFinaĵon rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Fin_o"/>
+        <HavasPostfikson rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#postf_j"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#postf_j -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#postf_j">
+        <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Postf_j"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Afiksoj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Finaĵoj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Radikoj"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Frazopartoj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Gramatika_kategorioj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Vorteroj"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Majuskloj_literoj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Minuskloj_literoj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Nomoj_de_literoj"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Postfiksoj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Prefiksoj"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Sufiksoj"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasAfikson"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasFinaĵon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasRadikon"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasPostfikson"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasPrefikson"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#HavasSufikson"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
