@@ -45,16 +45,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#estasFrazoparto -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#estasFrazoparto">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasGramatikanSenson"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Frazoparto"/>
-        <rdfs:label xml:lang="eo">estas frazoparto</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasAfikson -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasAfikson">
@@ -255,6 +245,16 @@
         <rdfs:label xml:lang="eo">Abocodo</rdfs:label>
         <rdfs:label xml:lang="en">Alphabet</rdfs:label>
         <rdfs:label xml:lang="ru">Алфавит</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Adjektivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Adjektivo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Frazoparto"/>
+        <rdfs:label xml:lang="eo">Adjektivo</rdfs:label>
+        <rdfs:label xml:lang="ru">Прилагательное</rdfs:label>
     </owl:Class>
     
 
@@ -545,6 +545,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Substantivo">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Frazoparto"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasFinajxon"/>
+                <owl:hasValue rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#fin_o"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="eo">Substantivo</rdfs:label>
         <rdfs:label xml:lang="ru">Существитльное</rdfs:label>
     </owl:Class>
@@ -575,13 +581,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Vortoformo">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Leksemo"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#estasFrazoparto"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Frazoparto"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#kongruaLeksemo"/>
@@ -919,6 +918,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_l">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">L</majusklo>
         <minusklo xml:lang="eo">l</minusklo>
         <nomoDeLitero xml:lang="eo">lo</nomoDeLitero>
@@ -930,6 +930,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_m">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">M</majusklo>
         <minusklo xml:lang="eo">m</minusklo>
         <nomoDeLitero xml:lang="eo">mo</nomoDeLitero>
@@ -941,6 +942,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_n">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">N</majusklo>
         <minusklo xml:lang="eo">n</minusklo>
         <nomoDeLitero xml:lang="eo">no</nomoDeLitero>
@@ -952,6 +954,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_o">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">O</majusklo>
         <minusklo xml:lang="eo">o</minusklo>
         <nomoDeLitero xml:lang="eo">o</nomoDeLitero>
@@ -963,6 +966,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_p">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">P</majusklo>
         <minusklo xml:lang="eo">p</minusklo>
         <nomoDeLitero xml:lang="eo">po</nomoDeLitero>
@@ -974,6 +978,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_r">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">R</majusklo>
         <minusklo xml:lang="eo">r</minusklo>
         <nomoDeLitero xml:lang="eo">ro</nomoDeLitero>
@@ -985,6 +990,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_s">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">S</majusklo>
         <minusklo xml:lang="eo">s</minusklo>
         <nomoDeLitero xml:lang="eo">so</nomoDeLitero>
@@ -996,6 +1002,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_sx">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">Ŝ</majusklo>
         <minusklo xml:lang="eo">ŝ</minusklo>
         <nomoDeLitero xml:lang="eo">ŝo</nomoDeLitero>
@@ -1007,6 +1014,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_t">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">T</majusklo>
         <minusklo xml:lang="eo">t</minusklo>
         <nomoDeLitero xml:lang="eo">to</nomoDeLitero>
@@ -1018,6 +1026,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_u">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">U</majusklo>
         <minusklo xml:lang="eo">u</minusklo>
         <nomoDeLitero xml:lang="eo">u</nomoDeLitero>
@@ -1029,6 +1038,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_ux">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">Ŭ</majusklo>
         <minusklo xml:lang="eo">ŭ</minusklo>
         <nomoDeLitero xml:lang="eo">ŭo</nomoDeLitero>
@@ -1040,6 +1050,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_v">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">V</majusklo>
         <minusklo xml:lang="eo">v</minusklo>
         <nomoDeLitero xml:lang="eo">vo</nomoDeLitero>
@@ -1051,6 +1062,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#lit_z">
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Litero"/>
+        <lingvo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#ling_esperanto"/>
         <majusklo xml:lang="eo">Z</majusklo>
         <minusklo xml:lang="eo">z</minusklo>
         <nomoDeLitero xml:lang="eo">zo</nomoDeLitero>
@@ -1628,6 +1640,7 @@
     <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#v_hundidoj -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#v_hundidoj">
+        <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Substantivo"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Vortoformo"/>
         <havasFinajxon rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#fin_o"/>
         <havasPostfikson rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#postf_j"/>
@@ -1645,12 +1658,14 @@
     <!-- http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#v_redistribuon -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#v_redistribuon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Substantivo"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Vortoformo"/>
         <havasFinajxon rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#fin_o"/>
         <havasPrefikson rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#pref_re"/>
         <havasRadikon rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#rad_distribu"/>
         <kongruaLeksemo rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#leks_redistribuo"/>
         <skribajxo xml:lang="eo">redistribuon</skribajxo>
+        <rdfs:label xml:lang="eo">redistribuon</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1698,11 +1713,60 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorot">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorto">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vskrib">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Postf_j_en_pluralo</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Vortoformo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorot"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasPostfikson"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorto"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#postf_j"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasGramatikanNombron"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorto"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#grnom_pluralo"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
     </rdf:Description>
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
@@ -1753,7 +1817,7 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Postf_j_en_pluralo</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ekskrecio de postf_j</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -1811,9 +1875,28 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasGramatikanNombron"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasPostfikson"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorto"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#grnom_pluralo"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#postf_j"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ekskrecio de postf_n</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#Vortoformo"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorto"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -1821,15 +1904,53 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasPostfikson"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#skribajxo"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorto"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#postf_j"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vskrib"/>
                             </rdf:Description>
                         </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#endsWith"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vskrib"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
                     </rdf:Description>
                 </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#havasPostfikson"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#vorto"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#postf_n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
