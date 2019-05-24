@@ -1,0 +1,8 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eoon: <http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#>
+SELECT ?vorto ?morfemo ?sememo
+WHERE {
+  ?vorto rdf:type eoon:Vortoformo .
+  ?vorto eoon:havasMorfemon ?morfemo .
+  OPTIONAL{?morfemo eoon:havasSememon ?sememo}
+}

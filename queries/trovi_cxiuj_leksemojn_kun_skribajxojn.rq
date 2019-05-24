@@ -1,0 +1,7 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eoon: <http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#>
+SELECT ?leksemo ?skribajxo
+WHERE {
+  ?leksemo rdf:type eoon:Leksemo .
+  ?leksemo eoon:skribajxo ?skribajxo .
+}

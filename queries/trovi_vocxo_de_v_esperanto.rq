@@ -1,0 +1,7 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX eoon: <http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#>
+SELECT ?vocxo
+WHERE {
+  eoon:v_esperanto eoon:havasGramemon ?vocxo .
+  ?vocxo rdf:type eoon:Gramatika_vocxo .
+}

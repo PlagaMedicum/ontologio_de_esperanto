@@ -1,0 +1,5 @@
+PREFIX eoon: <http://www.semanticweb.org/plagamedicum/ontologies/2019/3/Esperanto#>
+SELECT ?vorto
+WHERE {
+  ?vorto eoon:havasFinajxon eoon:fin_a
+}
